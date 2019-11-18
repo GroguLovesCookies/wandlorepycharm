@@ -1,16 +1,11 @@
 from Classes.Wand import *
-from Classes.Attack import *
+from ObjectFiles.attacks import *
 import random
 
 
 attacker = -1
-icy_cage = Attack("Ice", 560, "Icy Cage")
-ice_fist = Attack("Ice", 1000, "Ice Fist")
-stun = Attack("Magic", 300, "Stun")
-punch = Attack("Magic", 300, "Punch")
-volcano = Attack("Flame", 1200, "Volcano")
 ice_wand = Wand("Ice Wand", 15, ["Ice"], [stun, icy_cage, punch, ice_fist])
-fire_wand = Wand("Fire Wand", 15, ["Flame"], [stun, volcano, punch, volcano])
+fire_wand = Wand("Fire Wand", 15, ["Flame"], [stun, volcano, punch, flaming_arrows])
 attack_power = 0
 
 while not ice_wand.hp <= 0 or not fire_wand.hp <= 0:
